@@ -2,7 +2,7 @@ import path from 'path'
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
-    entry:['webpack-hot-middle',path.resolve(__dirname,'public/index.js')],
+    entry:['webpack-hot-middleware',path.resolve(__dirname,'public/index.js')],
     output:{
         publicPath:path.resolve(__dirname,'assets'),
         name:'bundle.js'
@@ -17,9 +17,10 @@ export default {
                     plugins: ['@babel/transform-runtime']
                 }
             },
-            include:[
-                path.resolve(__dirname,'public')
-            ]
+            exclude:/(node_modules|bower_components)/,
+            // include:[
+            //     path.resolve(__dirname,'public')
+            // ]
         }
     ],
     plugins:[

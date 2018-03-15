@@ -5,7 +5,7 @@ import webpackMiddleWare from 'webpack-dev-middleware'
 import webpack from 'webpack'
 
 let app = express()
-
+//
 //npm run dev模式下，没有使用webpack打包文件到dist/frontEnd,即没有dist/frontEnd，
 //所以需要webpackMiddleWare作为中间件，模拟一个dist/frontEnd路径，浏览器可以通过这个路径渠道资源
 let isDev = !process.env.NODE_ENV

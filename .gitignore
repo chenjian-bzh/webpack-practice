@@ -1,2 +1,5 @@
-# 忽略node_modules文件夹下的所有文件
+﻿# 忽略node_modules文件夹下的所有文件
 node_modules/
+
+#忽略dist目录下的文件
+dist/
